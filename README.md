@@ -85,5 +85,3 @@ curl --header "Content-Type: application/json" \
   --data '{"name":"Test owner","title":"Boss"}' \
   https://cool-company-service-api.herokuapp.com/api/v1/companies/1/owners
 ```
-
-
