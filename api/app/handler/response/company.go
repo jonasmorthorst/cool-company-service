@@ -34,8 +34,8 @@ type OwnerResponse struct {
 	Title  	string `json:"title"`
 }
 
-func NewCompanySingleResponse(m *model.Company) *SingleCompanyResponse {
-	r := newCompanyResponse(m)
+func NewCompanySingleResponse(c *model.Company) *SingleCompanyResponse {
+	r := newCompanyResponse(c)
 
 	return &SingleCompanyResponse{r}
 }
@@ -54,29 +54,29 @@ func NewOwnersResponse(owners []*model.Owner) []OwnerResponse {
 	return list
 }
 
-func newCompanyResponse(m *model.Company) *CompanyResponse {
+func newCompanyResponse(c *model.Company) *CompanyResponse {
 	r := new(CompanyResponse)
-	r.Id = m.ID
-	r.Name = m.Name
-	r.CompanyID = m.CompanyID
-	r.Phone = m.Phone
-	r.Email = m.Email
-	r.Address = m.Address
-	r.City = m.City
-	r.ZipCode = m.ZipCode
-	r.Country = m.Country
-	r.Owners = NewOwnersResponse(m.Owners)
+	r.Id = c.ID
+	r.Name = c.Name
+	r.CompanyID = c.CompanyID
+	r.Phone = c.Phone
+	r.Email = c.Email
+	r.Address = c.Address
+	r.City = c.City
+	r.ZipCode = c.ZipCode
+	r.Country = c.Country
+	r.Owners = NewOwnersResponse(c.Owners)
 
-	r.CreatedAt = m.CreatedAt
+	r.CreatedAt = c.CreatedAt
 
 	return r
 }
 
-func NewCompanyListResponse(venues []model.Company) *CompanyListResponse {
+func NewCompanyListResponse(companies []model.Company) *CompanyListResponse {
 	r := new(CompanyListResponse)
 	cr := CompanyResponse{}
 	r.Companies = make([]CompanyResponse, 0)
-	for _, i := range venues {
+	for _, i := range companies {
 		cr.Id = i.ID
 		cr.Name = i.Name
 		cr.CompanyID = i.CompanyID

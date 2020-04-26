@@ -65,8 +65,6 @@ export default {
     async getCompanies () {
       const data = await this.$axios.$get('/companies')
 
-      console.log('data', data)
-
       this.companies = data.companies
     },
     onCompanyClick (id) {

@@ -16,14 +16,14 @@ func NewOwnerStore(db *gorm.DB) *OwnerStore {
 }
 
 func (us *OwnerStore) GetByID(id uint) (*model.Owner, error) {
-	var m model.Owner
-	if err := us.db.First(&m, id).Error; err != nil {
+	var o model.Owner
+	if err := us.db.First(&o, id).Error; err != nil {
 		if gorm.IsRecordNotFoundError(err) {
 			return nil, nil
 		}
 		return nil, err
 	}
-	return &m, nil
+	return &o, nil
 }
 
 func (us *OwnerStore) Create(o *model.Owner) (err error) {

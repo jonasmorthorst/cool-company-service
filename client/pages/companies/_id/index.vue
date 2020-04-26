@@ -183,7 +183,9 @@
                 <td><a @click="removeOwner(owner)">Remove</a></td>
               </tr>
               <tr v-if="!company.owners.length">
-                <td colspan="3"><i>No owners</i></td>
+                <td colspan="3">
+                  <i>No owners</i>
+                </td>
               </tr>
             </table>
           </div>
@@ -275,6 +277,7 @@ export default {
     },
     editClicked (e) {
       e.preventDefault()
+      // We create a copy we can modify
       this.companyCopy = Object.assign({}, this.company)
       this.isEdit = true
     },
@@ -297,6 +300,8 @@ export default {
 
       try {
         let response
+
+        // If the company is new, we need to make a POST request
         if (this.isNew) {
           response = await this.$axios.$post('/companies', payload)
 
@@ -327,14 +332,15 @@ export default {
       }
     },
     async deleteClicked () {
-      if (confirm('Do you really want to delete company?')) {
+      const msg = 'Do you really want to delete company?'
+      if (confirm(msg)) {
         try {
           await this.$axios.$delete('/companies/' + this.$route.params.id)
 
           this.$router.replace({ path: '/' })
 
           this.$toast.open({
-            message: 'Deleted successfully',
+            message: 'Successfully deleted',
             position: 'top-right'
           })
         } catch (e) {
@@ -349,6 +355,7 @@ export default {
     async addOwner (e) {
       e.preventDefault()
 
+      // Validate
       this.errors = []
 
       if (!this.newOwner.name) { this.errors.push('Owner name is required.') }
@@ -364,7 +371,7 @@ export default {
         this.getCompany()
 
         this.$toast.open({
-          message: 'Added successfully',
+          message: 'Successfully added',
           position: 'top-right'
         })
       } catch (e) {
@@ -384,7 +391,7 @@ export default {
           this.getCompany()
 
           this.$toast.open({
-            message: 'Removed successfully',
+            message: 'Successfully removed',
             position: 'top-right'
           })
         } catch (e) {

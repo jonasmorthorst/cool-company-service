@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config()
 
 export default {
   mode: 'universal',
@@ -19,9 +19,8 @@ export default {
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js' }
     ]
   },
-  env: {
-    baseUrl: process.env.BASE_URL,
-    apiUrl: process.env.API_URL
+  server: {
+    port: process.env.PORT
   },
   /*
   ** Customize the progress-bar color
@@ -64,7 +63,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    // baseURL: process.env.API_URL
+    baseURL: process.env.API_URL || 'https://cool-company-service-api.herokuapp.com/api/v1/'
   },
   /*
   ** Build configuration

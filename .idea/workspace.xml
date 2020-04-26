@@ -2,58 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad191d9e-bfe4-4d76-b30d-10351022ac19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/api" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/app.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/core/company.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/core/owner.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/db/db.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/handler/company.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/handler/handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/handler/request/company.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/handler/response/company.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/handler/routes.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/model/company.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/model/owner.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/router/router.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/router/validator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/store/company.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app/store/owner.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/utils/errors.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/client/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/assets/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/client/assets/scss/main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Logo.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/client/components/Navigation.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/layouts/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/layouts/default.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/middleware/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/nuxt.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/pages/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/client/pages/companies/_id/index.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/client/pages/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/plugins/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/client/plugins/axios.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/client/plugins/vue-toast-notification.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx/default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/db/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/db/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/handler/company.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/handler/company.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/handler/request/company.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/handler/request/company.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/handler/response/company.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/handler/response/company.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/store/company.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/store/company.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/default.conf" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +54,9 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/api/app/core" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">

@@ -12,6 +12,9 @@ RUN apk add git
 COPY . /app/
 RUN npm install
 
+ARG API_URL
+ENV API_URL ${API_URL}
+
 # build necessary, even if no static files are needed,
 # since it builds the server as well
 RUN npm run build

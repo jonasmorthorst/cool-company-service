@@ -21,15 +21,15 @@ type OwnerRequest struct {
 	Title  	string `json:"title" validate:"required"`
 }
 
-func (r *CompanyRequest) Populate(e *model.Company) {
-	r.Name = e.Name
+func (r *CompanyRequest) Populate(c *model.Company) {
+	r.Name = c.Name
 	r.CompanyID = r.CompanyID
-	r.Email = e.Email
-	r.Phone = e.Phone
-	r.Address = e.Address
-	r.ZipCode = e.ZipCode
-	r.City = e.City
-	r.Country = e.Country
+	r.Email = c.Email
+	r.Phone = c.Phone
+	r.Address = c.Address
+	r.ZipCode = c.ZipCode
+	r.City = c.City
+	r.Country = c.Country
 }
 
 func (r *CompanyRequest) Bind(c echo.Context, m *model.Company) error {
