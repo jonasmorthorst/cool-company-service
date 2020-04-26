@@ -39,9 +39,14 @@
             <td>{{ company.email }}</td>
             <td>{{ company.phone }}</td>
           </tr>
-          <tr v-if="!companies.length">
+          <tr v-if="!companies.length && !isLoading">
             <td colspan="9">
               <i>No companies</i>
+            </td>
+          </tr>
+          <tr v-if="isLoading">
+            <td colspan="9">
+              <i>Loading</i>
             </td>
           </tr>
         </table>
@@ -55,7 +60,8 @@
 export default {
   data () {
     return {
-      companies: []
+      companies: [],
+      isLoading: true
     }
   },
   created () {
@@ -63,9 +69,20 @@ export default {
   },
   methods: {
     async getCompanies () {
-      const data = await this.$axios.$get('/companies')
+      this.isLoading = true
+      try {
+        const data = await this.$axios.$get('/companies')
 
-      this.companies = data.companies
+        this.companies = data.companies
+      } catch (e) {
+        this.$toast.open({
+          message: e,
+          position: 'top-right',
+          type: 'error'
+        })
+      } finally {
+        this.isLoading = false
+      }
     },
     onCompanyClick (id) {
       this.$router.push('companies/' + id)

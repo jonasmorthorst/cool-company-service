@@ -41,8 +41,8 @@ The API has the following endpoints:
 
 | Method | Url | Description |
 | :--- | :---- | :------|
-| GET  | /api/v1/companies  | Gets all companies|
-| GET  | /api/v1/companies/:id  | Gets a specific company |
+| GET  | /api/v1/companies  | Get all companies|
+| GET  | /api/v1/companies/:id  | Get a specific company |
 | POST  | /api/v1/companies  | Create a company |
 | PATCH  | /api/v1/companies/:id  | Update a company |
 | DELETE  | /api/v1/companies/:id  | Delete a company |
